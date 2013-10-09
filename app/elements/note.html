@@ -1,0 +1,25 @@
+<polymer-element name="note-element"  constructor="NoteElement" attributes="name length color">
+  <template>
+    <style>
+      @host { :scope {display: block;} }
+      .note{
+        background: black;
+        color: #ffffff;
+        height: 20px;
+      }
+    </style>
+    <div class="note" style="width: {{length}}px; color: {{color}}">{{name}} {{color}} {{length}}</div>
+  </template>
+  <script>
+    Polymer('note-element', {
+      name: 'yeah',
+      color: '#ffffff',
+      //applyAuthorStyles: true,
+      //resetStyleInheritance: true,
+      created: function() { },
+      enteredView: function() { },
+      leftView: function() { },
+      attributeChanged: function(attrName, oldVal, newVal) { }
+    });
+  </script>
+</polymer-element>
